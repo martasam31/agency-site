@@ -13,14 +13,17 @@ header {
 	padding: 0 85px;
 	color: white;
 	background-image: url('images/header-bg.jpg');
+	background-color: #030208;
 	background-position: 70% 70%;
 	background-size: cover;
 }
 
-header div.logo {
+header img {
 	float: left;
-	font-size: 3em;
-	margin-top: 35px
+	height: 200px;
+	width: 240px;
+	position: relative;
+	right: 50px;
 }
 
 header ul {
@@ -127,6 +130,8 @@ div.services {
 
 div.services h2 {
 	font-size: 35px;
+	position: relative;
+	top: -45px;
 }
 
 div.services h2 b {
@@ -136,6 +141,10 @@ div.services h2 b {
 div.services div.row {
 	margin-top: 70px;
 	text-align: center;
+}
+
+div.services div.row div.col-sm-3 {
+	min-width: 170px;
 }
 
 div.services div.row div.col-sm-3 p {
@@ -313,7 +322,7 @@ div.test-gallery div.row div.col-sm-6 a:hover {
 /*footer*/
 
 footer {
-	min-height: 185px;
+	min-height: 200px;
 	padding: 0 85px;
 	background-color: #130E27;
 	margin-bottom: -50px;
@@ -327,13 +336,57 @@ footer p {
 	float: left;
 }
 
-footer div.logo p{
-	color: #5DBBC1;
+footer img {
 	float: right;
-	font-size: 3em;
-	margin-top: -25px;
+	height: 200px;
+	width: 240px;
 }
 
+
+/*For screens less than 900px*/
+
+@media screen and (max-width: 960px) {
+	header, div.services, div.about, div.pricing, div.test-gallery, footer {
+		padding: 0 20px;
+	}
+
+	header form {
+		min-height: 80px;
+		height: 80px;
+		overflow: hidden;
+		transition-duration: 1s;
+	}
+
+	header form:hover {
+		height: 520px;
+	}
+
+	div.services h2 {
+		margin-top: 100px;
+	}
+}
+
+/*For screens less than 750px*/
+
+@media screen and (max-width: 750px) {
+	div.head-bg {
+		background-color: #030208;
+	}
+
+	header ul {
+		display: inline;
+	}
+
+	header ul li {
+		margin: 10px;
+		display: none;
+	}
+
+	header ul li:first-child {
+		margin-top: 55px;
+		display: block;
+	}
+}
 
 
 
